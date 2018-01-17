@@ -1,0 +1,46 @@
+<ion-menu [content]="content" >
+<!--[ngStyle]="{'background-image': 'url(assets/imgs/faex.jpg)'}-->
+  <ion-header class="bg-perfil" [ngStyle]="{'background-image': 'url(assets/imgs/faex.jpg)'}">
+    <ion-card class="hide-card">
+      <img src="assets/imgs/img-perfil.jpeg" class="custom-avatar"/>
+      <hr>
+      <h2>Nikolas Thaylor Andrade Ferreira</h2>
+      <p>Análise e Desenvolvimento de Sistemas</p>
+      <hr>
+    </ion-card>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="home"></ion-icon>
+        Página Inicial
+      </button>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="bookmarks"></ion-icon>
+        Acadêmico
+      </button>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="logo-usd"></ion-icon>
+        Financeiro
+      </button>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="book"></ion-icon>
+        Biblioteca
+      </button>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="calendar"></ion-icon>
+        Calendário
+      </button>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="create"></ion-icon>
+        Materiais
+      </button>
+      <button icon-start ion-item (click)="abrirPerfil()">
+        <ion-icon name="exit"></ion-icon>
+        Sair
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

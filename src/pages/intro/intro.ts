@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
 import {TabsPage} from "../tabs/tabs";
 
 /**
@@ -16,7 +16,7 @@ import {TabsPage} from "../tabs/tabs";
 })
 export class IntroPage {
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController,) {
     }
 
     ionViewDidLoad() {
@@ -25,6 +25,7 @@ export class IntroPage {
 
     goToTabsPage() {
         this.navCtrl.push(TabsPage);
+        this.viewCtrl.dismiss();
     }
 
 }
